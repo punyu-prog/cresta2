@@ -1,0 +1,499 @@
+/* ------------------- */
+/*       ベース 
+/* ------------------- */
+html{
+  font-size: 62.5%;
+}
+body{
+  font-size: 1.6rem;
+  letter-spacing: .05em;
+  color: #171717;
+  font-family: 'Noto Serif','Noto Serif JP', serif;
+}
+img{
+  width: 100%;              /* 親要素の中で常に最大100%の大きさ */
+  vertical-align: bottom;   /*  画像の下に小さな余白ができるのを防ぐ*/
+  object-fit: cover;        /*  なくても良い*/
+}
+.section-wrapper{
+  padding: 100px 0 70px;
+}
+.section-title{
+  max-width: 1000px;
+  color: #282F35;
+  font-size: 6rem;
+  font-style: italic;
+  margin: 88px auto;
+  padding: 0 20px;
+}
+.section-title::after{ /*後ろに文字を表示させたい時*/
+  content: "";  /*""の中に文字を入れると反映*/
+  display: inline-block;
+  background-color: #282F35;
+  width: 200px;
+  height: 4px;
+  margin-left: 30px;
+  vertical-align: middle;   /* conxeptの横の線の位置を真ん中にするinline-blockと掛け合わせ */
+}
+.section-inner{
+  max-width: 1000px;
+  margin:  0 auto;
+  padding: 0 50px;
+}
+.section-bottom{
+  max-width: 1200px;
+  margin: 70px auto;
+  font-size: 9rem;
+  opacity: .05;
+}
+/* //ベース */
+
+/* ------------------- */
+/*     リンクボタン 
+/* ------------------- */
+.link-btn{
+  display: block;
+  width: 235px;
+  line-height: 60px;
+  margin: 0 auto 70px;
+  background-color: #9ddd54;
+  box-shadow: 0 0 6px #1b1310;
+  border-radius: 30px;
+  text-align: center;
+  color: #171717;
+  font-weight: bold;
+  text-decoration: none;
+  transition: .3s;
+}
+.link-btn:hover{
+  opacity: .7;
+  transition: .3s;
+}
+/* ・・リンクボタン */
+/* ------------------- */
+/*   最後の追加タグ調整 
+/* ------------------- */
+.text-right{
+  text-align: right;
+}
+.text-white{
+  color: #fff;
+}
+.section-title.text-white::after{
+  background-color: #fff;
+}
+.sp-br{
+  display: block;  /* pc版は改行しない */
+}
+/* //最後の追加調整 */
+
+/* ------------------- */
+/*       ヘッダー 
+/* ------------------- */
+.header{
+  padding: 19px 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  width: 100%;
+  transition: .3s;
+}
+.header-inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.header a{
+  color: rgb(252, 215, 6);
+  text-decoration: none;
+  transition: .3s;
+  font-weight: bold;
+  font-style: italic;
+}
+.header a:hover{
+  opacity: .7;
+  transition: .3s;
+}
+.site-title{
+  font-size: 2.6rem;
+}
+.nav-list{
+  display: flex;
+}
+.nav-item{
+  margin-right: 30px;
+}
+.nav-item:last-of-type{
+  margin-right: 0;          /* 最後のアイテムのマージンがつかない */
+}
+
+.burger-btn{
+  display: none;
+}
+/* //ヘッダー */
+
+/* ------------------- */
+/*   jsの為の設定 
+/* ------------------- */
+.header.fixed{
+  position: fixed;
+  background-color: #282f35;
+  padding: 30px;
+  width: 100%;
+  transition: .3s;
+}
+
+
+/* ------------------- */
+/*         fv 
+/* ------------------- */
+.fv{
+  height: 100vh;  /*高さを画面と合わせる*/
+  min-height: 550px;  /*最小高さ*/
+  position: relative;  /*main-copyの親要素に指定する*/
+  /* background-image: url(../img/main-fv_1.jpg);  背景画像を指定する */
+  background-size: cover;  /*背景領域を完全に覆う最小サイズにする*/
+  background-position: center;  /*中央に持ってくる*/
+}
+.fv img{
+  height: 100vh;
+  min-height: 550px;
+  object-fit: cover;
+}
+.main-copy{
+  position: absolute;
+  left: 120px;
+  bottom: 177px;
+  color: #fff;
+  font-weight: bold;
+}
+.en-copy{
+  font-size: 7rem;
+  margin-bottom: 31px;
+}
+.jp-copy{
+  font-size: 4rem;
+  text-align: center;
+}
+/* スライドショーにした為上にボタンが表示された、それを消す設定 */
+.slick-arrow{
+  display: none !important;
+}
+/* //fv */
+
+/* ------------------- */
+/*       concept 
+/* ------------------- */
+.concept-lead{
+  text-align: center;
+  font-size: 3rem;
+  margin: 60px;
+  font-weight: bold;
+  line-height: 1.7;
+}
+.concept-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 70px;
+}
+.concept-text{
+  max-width: 440px;
+  line-height: 1.9;
+  font-weight: bold;
+}
+.concept-img-wrapper{
+  min-width: 440px;
+  margin-left: 20px;
+}
+/* //concept */
+
+/* ------------------- */
+/*       works 
+/* ------------------- */
+.bg-works{
+  background-image: url(../img/works-bgi@2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.works-list{
+  max-width: 1000px;
+  margin: 0 auto 80px;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.works-item{
+  width: 32%;
+  background-color: #fff;
+}
+.works-item a{
+  color: #141414;
+  text-decoration: none;
+}
+.works-list-text{
+  padding: 25px 20px;
+}
+/* //works */
+
+/* ------------------- */
+/*       service 
+/* ------------------- */
+.service-list{
+  display: flex;
+}
+.service-item{
+  width: 33.3%;
+}
+.service-item.service1{
+  background-image: url(../img/card-img1.jpg);
+}
+.service-item.service2{
+  background-image: url(../img/card-img2.jpg);
+}
+.service-item.service3{
+  background-image: url(../img/card-img03.jpg);
+}
+.service-item a{
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  line-height: 270px;
+  font-size: 4rem;
+  font-weight: bold;
+  font-style: italic;
+  transition: .3s;
+}
+.service-item a:hover{
+  background-color: rgba(40,47,53,.7);
+  transition: .3s;
+}
+/* //service */
+
+/* ------------------- */
+/*       contact 
+/* ------------------- */
+.bg-contact{
+  background: linear-gradient(90deg, rgba(22, 135, 237, 0.6), rgba(20, 55, 90, 0.9)) ,url(../img/main-fv_1.jpg);  /* グラデーション入り背景 */
+  background-size: cover;
+  background-position: center;
+  padding-top: 50px;
+}
+.contact-text{
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+/* //contact */
+
+/* ------------------- */
+/*       footer 
+/* ------------------- */
+.footer{
+  padding: 30px 0;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #282f35;
+}
+/* //footer */
+
+/* ------------------- */
+/*     レスポンシブ 
+/* ------------------- */
+@media screen and (max-width:768px){
+  /* ------------------- */
+  /*     base_sp 
+  /* ------------------- */
+  .sectopm-wrapper{
+    padding: 100px 0 40px;
+  }
+  .section-title{
+    padding: 0 4vw;  /* スマホの時40px、タブ30px取れる感じ*/
+    font-size: 3rem;
+    margin-bottom: 50px;
+  }
+  .section-title::after{
+    width: 90px;
+  }
+  .section-inner{
+    padding: 0 4vw;
+  }
+  .section-bottom{
+    font-size: 4rem;
+    padding: 0 4vw;
+  }
+  .link-btn{
+    margin-bottom: 40px;
+  }
+  .section-contents img{
+    width: 100%;
+    margin: 0;
+  }
+
+
+  /* ------------------- */
+  /*      header_sp 
+  /* ------------------- */
+  .header{
+    padding: 30px 4vw 0;
+  }
+  .header-nav{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #282f35;
+  }
+  .nav-list{
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-item{
+    margin: 0 0 30px;
+  }
+  .nav-item:last-of-type{
+    margin-bottom: 0;
+  }
+  
+  /* ------------------- */
+  /*  ハンバーガーメニュー 
+  /* ------------------- */
+  .burger-btn{
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 4vw;
+  }
+  .burger-btn .bar{
+    display: block;
+    height: 3px;
+    width: 30px;
+    background-color: rgb(252, 215, 6);
+    transition: .3s;  /*最後に追加*/
+  }
+  .bar_top,
+  .bar_mid{
+    margin-bottom: 8px;
+  }
+  /* jsでアニメーション設定のため追加 */
+  .burger-btn.cross .bar_top{
+    transform: rotate(45deg) translate(8px,8px);
+    transition: .3s;
+  }
+  .burger-btn.cross .bar_mid{
+    opacity: 0;
+    transition: .3s;
+  }
+  .burger-btn.cross .bar_bottom{
+    transform: rotate(-45deg) translate(8px,-8px);
+    transition: .3s;
+  }
+  /* バーガーメニューボタンを押した時に固定する設定の追加 */
+  .body.noscroll{
+    overflow: hidden;
+  }
+
+    /* ------------------- */
+    /*  ボタンタグのリセット 
+    /* ------------------- */
+    button{
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      padding: 0;
+      appearance: none;
+    }
+  
+  /* //ハンバーガーボタン */
+
+  /* ------------------- */
+  /* 追加した改行にモバイル版設定 
+  /* ------------------- */
+  .sp-br{
+    display: block;
+  }
+  .pc-br{
+    display: none;
+  }
+
+
+  /* ------------------- */
+  /*        fv_sp 
+  /* ------------------- */
+    .main-copy{
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+    .en-copy{
+      font-size: 9.8vw;
+      white-space: nowrap;
+    }
+    .jp-copy{
+      font-size: 8vw;
+    }
+
+  /* ------------------- */
+  /*     concept_sp 
+  /* ------------------- */
+  .concept-lead{
+    font-size: 2rem;
+    margin-bottom: 32px;
+  }
+  .concept-content{
+    display: block;
+    margin: 20px;
+  }
+  .concept-text{
+    margin-bottom: 30px;
+  }
+  .concept-img-wrapper{
+    margin: 0;
+  }
+  .concept-img-wrapper img{
+    margin: 0;
+  }
+
+
+  /* ------------------- */
+  /*      works_sp 
+  /* ------------------- */
+  .works-list{
+    display: block;
+    padding: 0 4vw;
+    margin-bottom: 80px;
+  }
+  .works-item{
+    width: 320px;
+    max-width: 100%;
+    margin: 0 auto 30px;
+  }
+
+  /* ------------------- */
+  /*     service_sp
+  /* ------------------- */
+  .service-list{
+    display: block;
+    margin-bottom: 40px;
+  }
+  .service-item{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .service-item a{
+    line-height: 250px;
+  }
+}
